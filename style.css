@@ -1,0 +1,94 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.buttons-slot {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.button {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.button img {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.volume-btn {
+    margin-top: 20px;
+}
+
+#volume-slider {
+    width: 200px;
+}
+
+#volume-value {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+/* Power button styles */
+.power-btn {
+    margin-bottom: 20px;
+}
+
+#power-button {
+    background-color: #ff4444;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+#power-button:hover {
+    background-color: #cc0000;
+}
+
+/* Disabled state for buttons when power is off */
+.button {
+    transition: opacity 0.3s ease;
+}
+
+/* Volume slider styles */
+#volume-slider {
+    width: 200px;
+}
+
+#volume-value {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+}
