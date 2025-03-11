@@ -1,60 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Drum Music</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    
     <div class="drum-machine" id="drum-machine">
+        <h1>Pokemon Drum Music</h1>
         <div class="display" id="display">
-            <h1>Pokemon Drum Music</h1>
+            <h1></h1>
+        </div>
         <div class="power-btn">
             <button id="power-button">Power Off</button>
         </div>
         <div class="buttons-slot">
-            <div class="button" id="button1" onclick="playSound('1')">
+            <!-- Q, W, E -->
+            <div class="drum-pad" id="buttonQ" data-key="Q" data-description="Bulbasaur">
                 <img src="images/250px-0001Bulbasaur.png" alt="Bulbasaur">
-                <audio id="sound1" src="sounds/bulbasaur.mp3"></audio>
+                <audio class="clip" id="Q" src="sounds/bulbasaur.mp3"></audio>
+                <p>Q</p>
             </div>
-            <div class="button" id="button2" onclick="playSound('2')">
+            <div class="drum-pad" id="buttonW" data-key="W" data-description="Charmander">
                 <img src="images/250px-0004Charmander.png" alt="Charmander">
-                <audio id="sound2" src="sounds/charmander.mp3"></audio>
+                <audio class="clip" id="W" src="sounds/charmander.mp3"></audio>
+                <p>W</p>
             </div>
-            <div class="button" id="button3" onclick="playSound('3')">
+            <div class="drum-pad" id="buttonE" data-key="E" data-description="Squirtle">
                 <img src="images/250px-0007Squirtle.png" alt="Squirtle">
-                <audio id="sound3" src="sounds/squirtle.mp3"></audio>
+                <audio class="clip" id="E" src="sounds/squirtle.mp3"></audio>
+                <p>E</p>    
             </div>
-            <div class="button" id="button4" onclick="playSound('4')">
+
+            <!-- A, S, D -->
+            <div class="drum-pad" id="buttonA" data-key="A" data-description="Pikachu">
                 <img src="images/250px-0025Pikachu.png" alt="Pikachu">
-                <audio id="sound4" src="sounds/pikachu.mp3"></audio>
+                <audio class="clip" id="A" src="sounds/pikachu.mp3"></audio>
+                <p>A</p>
             </div>
-            <div class="button" id="button5" onclick="playSound('5')">
+            <div class="drum-pad" id="buttonS" data-key="S" data-description="Zubat">
                 <img src="images/250px-0041Zubat.png" alt="Zubat">
-                <audio id="sound5" src="sounds/zubat.mp3"></audio>
+                <audio class="clip" id="S" src="sounds/zubat.mp3"></audio>
+                <p>S</p>
             </div>
-            <div class="button" id="button6" onclick="playSound('6')">
+            <div class="drum-pad" id="buttonD" data-key="D" data-description="Geodude">
                 <img src="images/250px-0074Geodude.png" alt="Geodude">
-                <audio id="sound6" src="sounds/geodude.mp3"></audio>
+                <audio class="clip" id="D" src="sounds/geodude.mp3"></audio>
+                <p>D</p>
             </div>
-            <div class="button" id="button7" onclick="playSound('7')">
+
+            <!-- Z, X, C -->
+            <div class="drum-pad" id="buttonZ" data-key="Z" data-description="Gastly">
                 <img src="images/250px-0092Gastly.png" alt="Gastly">
-                <audio id="sound7" src="sounds/7.mp3"></audio>
+                <audio class="clip" id="Z" src="sounds/gastly.mp3"></audio>
+                <p>Z</p>
             </div>
-            <div class="button" id="button8" onclick="playSound('8')">
+            <div class="drum-pad" id="buttonX" data-key="X" data-description="Hypno">
                 <img src="images/250px-0097Hypno.png" alt="Hypno">
-                <audio id="sound8" src="sounds/hypno.mp3"></audio>
+                <audio class="clip" id="X" src="sounds/hypno.mp3"></audio>
+                <p>X</p>
             </div>
-            <div class="button" id="button9" onclick="playSound('9')">
+            <div class="drum-pad" id="buttonC" data-key="C" data-description="Magikarp">
                 <img src="images/250px-0129Magikarp.png" alt="Magikarp">
-                <audio id="sound9" src="sounds/magikarp.mp3"></audio>
+                <audio class="clip" id="C" src="sounds/magikarp.mp3"></audio>
+                <p>C</p>
             </div>
+            
         </div>
         <div class="volume-btn">
-            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
-            <span id="volume-value">100%</span>
-        </div>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+                <span id="volume-value">100%</span>
+            </div>
+            
     </div>
 
     <script src="script.js"></script>

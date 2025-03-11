@@ -10,19 +10,32 @@ body {
     height: 100vh;
 }
 
-.container {
+.drum-machine {
     text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.display h1 {
+    margin: 0 0 10px;
+}
+
+.display p {
+    margin: 0 0 20px;
 }
 
 .buttons-slot {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    max-width: 600px;
-    margin: 0 auto;
+    margin: 20px 0;
 }
 
-.button {
+.drum-pad {
     background-color: #333;
     border-radius: 10px;
     padding: 20px;
@@ -34,18 +47,44 @@ body {
     align-items: center;
 }
 
-.button:hover {
+.drum-pad:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.button img {
+.drum-pad img {
     width: 100px;
     height: 100px;
     display: block;
 }
 
+/* Power button styles */
+.power-btn {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#power-button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+    background-color: #4CAF50; /* Green for active state */
+}
+
+#power-button:hover {
+    opacity: 0.9;
+}
+
+/* Volume slider styles */
 .volume-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
 }
 
@@ -58,37 +97,45 @@ body {
     margin-top: 10px;
     font-size: 16px;
 }
-/* Power button styles */
-.power-btn {
-    margin-bottom: 20px;
+/* Add your styles here */
+.drum-pad p {
+    visibility: hidden; /* Hides the <p> element but keeps its space */
+    /* OR */
+    opacity: 0; /* Makes the <p> element fully transparent */
+    /* OR */
+    display: none; /* Completely removes the <p> element from the layout (use if space should not be reserved) */
+}
+/* Add your styles here */
+.drum-machine {
+    text-align: center;
+    margin: 20px;
 }
 
-#power-button {
-    background-color: #ff4444;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+.drum-pad {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #000;
     cursor: pointer;
-    color: white;
 }
 
-#power-button:hover {
-    background-color: #cc0000;
+.drum-pad img {
+    width: 100px;
+    height: 100px;
 }
 
-/* Disabled state for buttons when power is off */
-.button {
-    transition: opacity 0.3s ease;
+#display {
+    margin: 20px;
+    font-size: 24px;
 }
 
-/* Volume slider styles */
-#volume-slider {
-    width: 200px;
+.volume-btn {
+    margin-top: 20px;
 }
 
-#volume-value {
-    display: block;
-    margin-top: 10px;
-    font-size: 16px;
+#pokemon-display {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
 }
