@@ -45,6 +45,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 29
 }
 
 .drum-pad:hover {
