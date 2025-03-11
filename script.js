@@ -36,7 +36,8 @@ function playSound(key) {
 
         // Update the new display with the Pokémon's name
         const description = drumPad.getAttribute('data-description');
-        pokemonDisplay.textContent = description;
+        pokemonDisplay.innerText = description;
+
     }
 }
 
@@ -45,9 +46,12 @@ const drumPads = document.querySelectorAll('.drum-pad');
 drumPads.forEach(pad => {
     pad.addEventListener('click', () => {
         const key = pad.getAttribute('data-key'); // Get the data-key attribute
+        console.log("Clicked:", key); // Debugging
         playSound(key); // Play the sound associated with the key
     });
 });
+
+
 
 // Volume control
 const volumeSlider = document.getElementById('volume-slider');

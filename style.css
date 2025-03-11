@@ -99,12 +99,11 @@ body {
 }
 /* Add your styles here */
 .drum-pad p {
-    visibility: hidden; /* Hides the <p> element but keeps its space */
-    /* OR */
-    opacity: 0; /* Makes the <p> element fully transparent */
-    /* OR */
-    display: none; /* Completely removes the <p> element from the layout (use if space should not be reserved) */
+    font-size: 0px;
+    font-weight: bold;
+    color: white;
 }
+
 /* Add your styles here */
 .drum-machine {
     text-align: center;
