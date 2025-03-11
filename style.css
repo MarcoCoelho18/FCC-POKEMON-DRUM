@@ -31,8 +31,8 @@ body {
 .buttons-slot {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin: 20px 0;
+    gap: 1px;
+    margin: 10px 0;
 }
 
 .drum-pad {
@@ -45,7 +45,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 29
+    
+    
 }
 
 .drum-pad:hover {
